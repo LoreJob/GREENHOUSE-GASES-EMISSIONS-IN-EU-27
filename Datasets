@@ -1,0 +1,9 @@
+# We download the dataset from EEA website, it's a 90MB csv file
+
+url_emissions = "https://sdi.eea.europa.eu/datashare/s/nQm7mfWywfyLdLX/download"
+!mkdir GLEMfolder
+urllib.request.urlretrieve(url_emissions,"GLEMfolder/filesGLEM.zip")
+shutil.unpack_archive("GLEMfolder/filesGLEM.zip","./GLEMfolder")
+
+file_path = "./GLEMfolder/eea_t_national-emissions-reported_p_2023_v01_r01"
+emissions_df = pd.read_csv(file_path + "/UNFCCC_v26.csv")
