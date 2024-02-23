@@ -1,0 +1,30 @@
+import numpy as np
+import pandas as pd
+from pandas import Series
+from pandas import DataFrame
+import matplotlib.pyplot as plt
+import matplotlib
+import seaborn as sns
+plt.rc('figure', figsize=(12, 9))
+np.set_printoptions(precision=4, suppress=True)
+
+import urllib.request
+import shutil
+
+# Packages used in Chapter I.III and II.I for Choropleth Maps
+import plotly.express as px
+
+# Packages used in Chapter II.II in order to downloead data from OECD website
+!pip install pandasdmx
+import pandasdmx as pdmx
+
+# Packages used in Chapter IV for Linear Regression and Classification
+from sklearn import metrics
+from sklearn.metrics import classification_report
+from sklearn import model_selection
+from sklearn.linear_model import LinearRegression
+from sklearn.linear_model import LogisticRegression
+from sklearn.datasets import make_classification
+from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
+from sklearn.model_selection import train_test_split
+from sklearn.svm import SVC
